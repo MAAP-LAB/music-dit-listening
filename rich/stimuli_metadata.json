@@ -1,0 +1,54 @@
+{
+  "trials": [
+    {
+      "trial_id": 1,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "funk",
+      "expected_correct": "B",
+      "A_source": "an_upbeat_funky_baseline.wav",
+      "B_source": "an_upbeat_funky_electronic_a+22_w35-65.wav",
+      "notes": "more electronic on funk (rich prompt, steps=100, alpha=22 w35-65); steered=B"
+    },
+    {
+      "trial_id": 2,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "classical",
+      "expected_correct": "B",
+      "A_source": "a_serene_classical_baseline.wav",
+      "B_source": "a_serene_classical_drums_a-22_w35-65.wav",
+      "notes": "less drums on classical (rich prompt, steps=100, alpha=22 w35-65); steered=B"
+    },
+    {
+      "trial_id": 3,
+      "type": "less",
+      "target_concept": "electronic",
+      "genre": "rock",
+      "expected_correct": "B",
+      "A_source": "an_energetic_rock_baseline.wav",
+      "B_source": "an_energetic_rock_electronic_a-22_w35-65.wav",
+      "notes": "less electronic on rock (rich prompt, steps=100, alpha=22 w35-65); steered=B"
+    },
+    {
+      "trial_id": 4,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "an_upbeat_funky_baseline.wav",
+      "B_source": null,
+      "notes": "rate baseline audio quality"
+    },
+    {
+      "trial_id": 5,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "a_serene_classical_baseline.wav",
+      "B_source": null,
+      "notes": "rate baseline audio quality"
+    }
+  ]
+}
