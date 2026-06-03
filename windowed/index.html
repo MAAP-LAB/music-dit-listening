@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Music DiT Steering — Listening Test (windowed steering)</title>
+<title>Music DiT Steering — Listening Test (windowed, 8 genres)</title>
 <style>
  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1a1a1a;background:#fafafa;max-width:760px;margin:0 auto;padding:24px 18px 90px;line-height:1.5}
  h1{font-size:1.45rem;margin-bottom:4px}.sub{color:#666;margin-top:0}
@@ -16,27 +16,30 @@
  .progress{color:#666;font-size:.9rem}.err{color:#c00;font-weight:600}.done{color:#1a8f3a;font-weight:700}
  textarea{width:100%;min-height:60px;border:1px solid #e3e3e3;border-radius:6px;padding:8px;font-family:inherit}
 </style></head><body>
-<h1>Music DiT Steering — Listening Test (windowed steering)</h1>
-<p class="sub">~9 minutes (windowed-steering variant). <b>Headphones recommended.</b> Clips are short musical excerpts. Nothing is uploaded; answers download as CSV.</p>
+<h1>Music DiT Steering — Listening Test (windowed, 8 genres)</h1>
+<p class="sub">~11 minutes. <b>Headphones recommended.</b> Clips are short musical excerpts. Nothing is uploaded; answers download as CSV.</p>
 <div class="card"><label for="rater"><b>Your rater ID:</b></label><br/><input id="rater" placeholder="e.g. r01" autocomplete="off"/></div>
 <div id="trials"></div>
 <div class="card"><label for="comments"><b>Optional comments:</b></label><textarea id="comments"></textarea></div>
 <div class="bar"><span class="progress" id="progress"></span><button id="submit">Finish &amp; download CSV</button><span id="msg"></span></div>
 <script>
 const TRIALS = [
-  {id:1,type:"more",concept:"bass",genre:"jazz"},
-  {id:2,type:"more",concept:"bass",genre:"ambient"},
+  {id:1,type:"more",concept:"electronic/synth elements",genre:"funk"},
+  {id:2,type:"more",concept:"electronic/synth elements",genre:"reggae"},
   {id:3,type:"more",concept:"electronic/synth elements",genre:"jazz"},
-  {id:4,type:"less",concept:"drums",genre:"rock"},
-  {id:5,type:"less",concept:"drums",genre:"hip-hop"},
-  {id:6,type:"less",concept:"bass",genre:"rock"},
-  {id:7,type:"less",concept:"bass",genre:"hip-hop"},
-  {id:8,type:"less",concept:"electronic/synth elements",genre:"hip-hop"},
-  {id:9,type:"less",concept:"electronic/synth elements",genre:"ambient"},
-  {id:10,type:"mos"},
-  {id:11,type:"mos"},
-  {id:12,type:"mos"},
-  {id:13,type:"mos"}
+  {id:4,type:"more",concept:"bass",genre:"jazz"},
+  {id:5,type:"more",concept:"bass",genre:"ambient"},
+  {id:6,type:"more",concept:"drums",genre:"jazz"},
+  {id:7,type:"less",concept:"bass",genre:"synthwave"},
+  {id:8,type:"less",concept:"electronic/synth elements",genre:"synthwave"},
+  {id:9,type:"less",concept:"drums",genre:"synthwave"},
+  {id:10,type:"less",concept:"drums",genre:"ambient"},
+  {id:11,type:"less",concept:"drums",genre:"classical"},
+  {id:12,type:"less",concept:"electronic/synth elements",genre:"ambient"},
+  {id:13,type:"mos"},
+  {id:14,type:"mos"},
+  {id:15,type:"mos"},
+  {id:16,type:"mos"}
 ];
 function pad(n){return n<10?"0"+n:""+n;}
 const c=document.getElementById("trials");
