@@ -1,0 +1,143 @@
+{
+  "trials": [
+    {
+      "trial_id": 1,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "magnitude": 15,
+      "expected_correct": "A",
+      "A_source": "smooth_jazz_piano_bass_a+15.wav",
+      "B_source": "smooth_jazz_piano_baseline.wav",
+      "notes": "more bass on jazz (|a|=15); steered=A"
+    },
+    {
+      "trial_id": 2,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "ambient",
+      "magnitude": 15,
+      "expected_correct": "A",
+      "A_source": "ambient_soundscape_with_bass_a+15.wav",
+      "B_source": "ambient_soundscape_with_baseline.wav",
+      "notes": "more bass on ambient (|a|=15); steered=A"
+    },
+    {
+      "trial_id": 3,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "jazz",
+      "magnitude": 15,
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_electronic_a+15.wav",
+      "notes": "more electronic on jazz (|a|=15); steered=B"
+    },
+    {
+      "trial_id": 4,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "rock",
+      "magnitude": 15,
+      "expected_correct": "A",
+      "A_source": "energetic_rock_with_drums_a-15.wav",
+      "B_source": "energetic_rock_with_baseline.wav",
+      "notes": "less drums on rock (|a|=15); steered=A"
+    },
+    {
+      "trial_id": 5,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "hiphop",
+      "magnitude": 15,
+      "expected_correct": "B",
+      "A_source": "hip-hop_beat_with_baseline.wav",
+      "B_source": "hip-hop_beat_with_drums_a-15.wav",
+      "notes": "less drums on hiphop (|a|=15); steered=B"
+    },
+    {
+      "trial_id": 6,
+      "type": "less",
+      "target_concept": "bass",
+      "genre": "rock",
+      "magnitude": 15,
+      "expected_correct": "A",
+      "A_source": "energetic_rock_with_bass_a-15.wav",
+      "B_source": "energetic_rock_with_baseline.wav",
+      "notes": "less bass on rock (|a|=15); steered=A"
+    },
+    {
+      "trial_id": 7,
+      "type": "less",
+      "target_concept": "bass",
+      "genre": "hiphop",
+      "magnitude": 15,
+      "expected_correct": "A",
+      "A_source": "hip-hop_beat_with_bass_a-15.wav",
+      "B_source": "hip-hop_beat_with_baseline.wav",
+      "notes": "less bass on hiphop (|a|=15); steered=A"
+    },
+    {
+      "trial_id": 8,
+      "type": "less",
+      "target_concept": "electronic",
+      "genre": "hiphop",
+      "magnitude": 15,
+      "expected_correct": "B",
+      "A_source": "hip-hop_beat_with_baseline.wav",
+      "B_source": "hip-hop_beat_with_electronic_a-15.wav",
+      "notes": "less electronic on hiphop (|a|=15); steered=B"
+    },
+    {
+      "trial_id": 9,
+      "type": "less",
+      "target_concept": "electronic",
+      "genre": "ambient",
+      "magnitude": 15,
+      "expected_correct": "A",
+      "A_source": "ambient_soundscape_with_electronic_a-15.wav",
+      "B_source": "ambient_soundscape_with_baseline.wav",
+      "notes": "less electronic on ambient (|a|=15); steered=A"
+    },
+    {
+      "trial_id": 10,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "energetic_rock_with_bass_a-15.wav",
+      "B_source": null,
+      "notes": "rate 1-5 audio quality"
+    },
+    {
+      "trial_id": 11,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "smooth_jazz_piano_bass_a+15.wav",
+      "B_source": null,
+      "notes": "rate 1-5 audio quality"
+    },
+    {
+      "trial_id": 12,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "classical_orchestra_with_baseline.wav",
+      "B_source": null,
+      "notes": "rate 1-5 audio quality"
+    },
+    {
+      "trial_id": 13,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "hip-hop_beat_with_drums_a-15.wav",
+      "B_source": null,
+      "notes": "rate 1-5 audio quality"
+    }
+  ]
+}
