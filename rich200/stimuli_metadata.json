@@ -8,30 +8,100 @@
       "expected_correct": "B",
       "A_source": "an_upbeat_funky_baseline.wav",
       "B_source": "an_upbeat_funky_electronic_a+22_w35-65.wav",
-      "notes": "more electronic on funk (rich prompt, steps=200, alpha=22 w35-65); steered=B"
+      "notes": "more electronic on funk (rich, steps=200, alpha=22 w35-65); steered=B"
     },
     {
       "trial_id": 2,
-      "type": "less",
-      "target_concept": "drums",
+      "type": "more",
+      "target_concept": "piano",
       "genre": "classical",
       "expected_correct": "B",
       "A_source": "a_serene_classical_baseline.wav",
-      "B_source": "a_serene_classical_drums_a-22_w35-65.wav",
-      "notes": "less drums on classical (rich prompt, steps=200, alpha=22 w35-65); steered=B"
+      "B_source": "a_serene_classical_piano_a+22_w35-65.wav",
+      "notes": "more piano on classical (rich, steps=200, alpha=22 w35-65); steered=B"
     },
     {
       "trial_id": 3,
-      "type": "less",
-      "target_concept": "electronic",
-      "genre": "rock",
+      "type": "more",
+      "target_concept": "drums",
+      "genre": "jazz",
       "expected_correct": "B",
-      "A_source": "an_energetic_rock_baseline.wav",
-      "B_source": "an_energetic_rock_electronic_a-22_w35-65.wav",
-      "notes": "less electronic on rock (rich prompt, steps=200, alpha=22 w35-65); steered=B"
+      "A_source": "a_smooth_jazz_baseline.wav",
+      "B_source": "a_smooth_jazz_drums_a+22_w35-65.wav",
+      "notes": "more drums on jazz (rich, steps=200, alpha=22 w35-65); steered=B"
     },
     {
       "trial_id": 4,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "expected_correct": "A",
+      "A_source": "a_smooth_jazz_bass_a+22_w35-65.wav",
+      "B_source": "a_smooth_jazz_baseline.wav",
+      "notes": "more bass on jazz (rich, steps=200, alpha=22 w35-65); steered=A"
+    },
+    {
+      "trial_id": 5,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "reggae",
+      "expected_correct": "B",
+      "A_source": "a_relaxed_reggae_baseline.wav",
+      "B_source": "a_relaxed_reggae_electronic_a+22_w35-65.wav",
+      "notes": "more electronic on reggae (rich, steps=200, alpha=22 w35-65); steered=B"
+    },
+    {
+      "trial_id": 6,
+      "type": "less",
+      "target_concept": "electronic",
+      "genre": "rock",
+      "expected_correct": "A",
+      "A_source": "an_energetic_rock_electronic_a-22_w35-65.wav",
+      "B_source": "an_energetic_rock_baseline.wav",
+      "notes": "less electronic on rock (rich, steps=200, alpha=22 w35-65); steered=A"
+    },
+    {
+      "trial_id": 7,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "rock",
+      "expected_correct": "B",
+      "A_source": "an_energetic_rock_baseline.wav",
+      "B_source": "an_energetic_rock_drums_a-22_w35-65.wav",
+      "notes": "less drums on rock (rich, steps=200, alpha=22 w35-65); steered=B"
+    },
+    {
+      "trial_id": 8,
+      "type": "less",
+      "target_concept": "guitar",
+      "genre": "rock",
+      "expected_correct": "A",
+      "A_source": "an_energetic_rock_guitar_a-22_w35-65.wav",
+      "B_source": "an_energetic_rock_baseline.wav",
+      "notes": "less guitar on rock (rich, steps=200, alpha=22 w35-65); steered=A"
+    },
+    {
+      "trial_id": 9,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "hiphop",
+      "expected_correct": "A",
+      "A_source": "a_hard_hip-hop_drums_a-22_w35-65.wav",
+      "B_source": "a_hard_hip-hop_baseline.wav",
+      "notes": "less drums on hiphop (rich, steps=200, alpha=22 w35-65); steered=A"
+    },
+    {
+      "trial_id": 10,
+      "type": "less",
+      "target_concept": "bass",
+      "genre": "hiphop",
+      "expected_correct": "A",
+      "A_source": "a_hard_hip-hop_bass_a-22_w35-65.wav",
+      "B_source": "a_hard_hip-hop_baseline.wav",
+      "notes": "less bass on hiphop (rich, steps=200, alpha=22 w35-65); steered=A"
+    },
+    {
+      "trial_id": 11,
       "type": "mos",
       "target_concept": null,
       "genre": null,
@@ -41,12 +111,22 @@
       "notes": "baseline audio quality"
     },
     {
-      "trial_id": 5,
+      "trial_id": 12,
       "type": "mos",
       "target_concept": null,
       "genre": null,
       "expected_correct": null,
-      "A_source": "a_serene_classical_baseline.wav",
+      "A_source": "a_smooth_jazz_baseline.wav",
+      "B_source": null,
+      "notes": "baseline audio quality"
+    },
+    {
+      "trial_id": 13,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "a_hard_hip-hop_baseline.wav",
       "B_source": null,
       "notes": "baseline audio quality"
     }
