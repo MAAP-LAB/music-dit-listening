@@ -17,13 +17,13 @@
  textarea{width:100%;min-height:60px;border:1px solid #e3e3e3;border-radius:6px;padding:8px;font-family:inherit}
 </style></head><body>
 <h1>Music DiT Steering — CFG Ablation Test (cfg=5 vs cfg=7)</h1>
-<p class="sub">~12 minutes. <b>Headphones recommended.</b> Clips are short musical excerpts. Nothing is uploaded; answers download as CSV.</p>
+<p class="sub">~10 minutes. <b>Headphones recommended.</b> Clips are short musical excerpts. Nothing is uploaded; answers download as CSV.</p>
 <div class="card"><label for="rater"><b>Your rater ID:</b></label><br/><input id="rater" placeholder="e.g. r01" autocomplete="off"/></div>
 <div id="trials"></div>
 <div class="card"><label for="comments"><b>Optional comments:</b></label><textarea id="comments"></textarea></div>
 <div class="bar"><span class="progress" id="progress"></span><button id="submit">Finish &amp; download CSV</button><span id="msg"></span></div>
 <script>
-const TRIALS = [{id:1,type:"more",concept:"drums",genre:"classical"},{id:2,type:"more",concept:"electronic/synth elements",genre:"rock"},{id:3,type:"more",concept:"electronic/synth elements",genre:"hip-hop"},{id:4,type:"more",concept:"drums",genre:"classical"},{id:5,type:"less",concept:"electronic/synth elements",genre:"ambient"},{id:6,type:"less",concept:"electronic/synth elements",genre:"ambient"},{id:7,type:"less",concept:"drums",genre:"ambient"},{id:8,type:"less",concept:"drums",genre:"ambient"},{id:9,type:"more",concept:"bass",genre:"jazz"},{id:10,type:"more",concept:"bass",genre:"jazz"},{id:11,type:"more",concept:"electronic/synth elements",genre:"hip-hop"},{id:12,type:"more",concept:"electronic/synth elements",genre:"rock"},{id:13,type:"mos"},{id:14,type:"mos"},{id:15,type:"mos"}];
+const TRIALS = [{id:1,type:"more",concept:"electronic/synth elements",genre:"jazz"},{id:2,type:"less",concept:"drums",genre:"jazz"},{id:3,type:"more",concept:"electronic/synth elements",genre:"jazz"},{id:4,type:"more",concept:"electronic/synth elements",genre:"rock"},{id:5,type:"more",concept:"electronic/synth elements",genre:"rock"},{id:6,type:"less",concept:"drums",genre:"jazz"},{id:7,type:"more",concept:"electronic/synth elements",genre:"hip-hop"},{id:8,type:"more",concept:"bass",genre:"jazz"},{id:9,type:"more",concept:"electronic/synth elements",genre:"hip-hop"},{id:10,type:"more",concept:"bass",genre:"jazz"},{id:11,type:"mos"},{id:12,type:"mos"}];
 function pad(n){return n<10?"0"+n:""+n;}
 const c=document.getElementById("trials");
 TRIALS.forEach(t=>{const d=document.createElement("div");d.className="card";
