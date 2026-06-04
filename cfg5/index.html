@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Music DiT Steering — CFG Ablation Test (cfg=5 vs cfg=7)</title>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1a1a1a;background:#fafafa;max-width:760px;margin:0 auto;padding:24px 18px 90px;line-height:1.5}
+ h1{font-size:1.45rem;margin-bottom:4px}.sub{color:#666;margin-top:0}
+ .card{background:#fff;border:1px solid #e3e3e3;border-radius:10px;padding:16px 18px;margin:16px 0}
+ .tn{font-weight:700;color:#4a3aff}.genre{color:#888;font-size:.85rem}
+ .clips{display:flex;gap:18px;flex-wrap:wrap;margin:10px 0}.clip{flex:1;min-width:220px}
+ .clip label{font-weight:600;font-size:.85rem;color:#666;display:block;margin-bottom:4px}audio{width:100%}
+ .opts label{display:block;padding:6px 0;cursor:pointer}.opts input{margin-right:8px}
+ .mos{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}.mos label{display:flex;flex-direction:column;align-items:center;font-size:.8rem;cursor:pointer}
+ #rater{font-size:1rem;padding:6px 10px;border:1px solid #e3e3e3;border-radius:6px;width:240px}
+ button{background:#4a3aff;color:#fff;border:0;border-radius:8px;padding:12px 22px;font-size:1rem;cursor:pointer}
+ .bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #e3e3e3;padding:12px 18px;display:flex;align-items:center;gap:16px;justify-content:center}
+ .progress{color:#666;font-size:.9rem}.err{color:#c00;font-weight:600}.done{color:#1a8f3a;font-weight:700}
+ textarea{width:100%;min-height:60px;border:1px solid #e3e3e3;border-radius:6px;padding:8px;font-family:inherit}
+</style></head><body>
+<h1>Music DiT Steering — CFG Ablation Test (cfg=5 vs cfg=7)</h1>
+<p class="sub">~12 minutes. <b>Headphones recommended.</b> Clips are short musical excerpts. Nothing is uploaded; answers download as CSV.</p>
+<div class="card"><label for="rater"><b>Your rater ID:</b></label><br/><input id="rater" placeholder="e.g. r01" autocomplete="off"/></div>
+<div id="trials"></div>
+<div class="card"><label for="comments"><b>Optional comments:</b></label><textarea id="comments"></textarea></div>
+<div class="bar"><span class="progress" id="progress"></span><button id="submit">Finish &amp; download CSV</button><span id="msg"></span></div>
+<script>
+const TRIALS = [{id:1,type:"more",concept:"drums",genre:"classical"},{id:2,type:"more",concept:"electronic/synth elements",genre:"rock"},{id:3,type:"more",concept:"electronic/synth elements",genre:"hip-hop"},{id:4,type:"more",concept:"drums",genre:"classical"},{id:5,type:"less",concept:"electronic/synth elements",genre:"ambient"},{id:6,type:"less",concept:"electronic/synth elements",genre:"ambient"},{id:7,type:"less",concept:"drums",genre:"ambient"},{id:8,type:"less",concept:"drums",genre:"ambient"},{id:9,type:"more",concept:"bass",genre:"jazz"},{id:10,type:"more",concept:"bass",genre:"jazz"},{id:11,type:"more",concept:"electronic/synth elements",genre:"hip-hop"},{id:12,type:"more",concept:"electronic/synth elements",genre:"rock"},{id:13,type:"mos"},{id:14,type:"mos"},{id:15,type:"mos"}];
+function pad(n){return n<10?"0"+n:""+n;}
+const c=document.getElementById("trials");
+TRIALS.forEach(t=>{const d=document.createElement("div");d.className="card";
+ if(t.type==="mos"){d.innerHTML=`<p><span class="tn">Trial ${t.id}</span> — Rate the <b>audio quality</b> of this clip.</p>
+   <audio controls preload="none" src="stimuli/trial${pad(t.id)}_solo.wav"></audio>
+   <div class="mos">${[1,2,3,4,5].map(v=>`<label><input type="radio" name="t${t.id}" value="${v}"><span>${v}</span></label>`).join("")}</div>
+   <p style="font-size:.78rem;color:#888">1 = very poor / broken · 3 = fair · 5 = excellent</p>`;}
+ else{const w=t.type==="more"?"MORE":"LESS";
+   d.innerHTML=`<p><span class="tn">Trial ${t.id}</span> — Which clip has <b>${w}</b> ${t.concept}? <span class="genre">(${t.genre} excerpt)</span></p>
+   <div class="clips"><div class="clip"><label>Clip A</label><audio controls preload="none" src="stimuli/trial${pad(t.id)}_A.wav"></audio></div>
+   <div class="clip"><label>Clip B</label><audio controls preload="none" src="stimuli/trial${pad(t.id)}_B.wav"></audio></div></div>
+   <div class="opts">
+   <label><input type="radio" name="t${t.id}" value="A">A has noticeably ${t.type} ${t.concept}</label>
+   <label><input type="radio" name="t${t.id}" value="B">B has noticeably ${t.type} ${t.concept}</label>
+   <label><input type="radio" name="t${t.id}" value="same">They sound about the same</label></div>`;}
+ c.appendChild(d);});
+function cnt(){return TRIALS.filter(t=>document.querySelector(`input[name="t${t.id}"]:checked`)).length;}
+function upd(){document.getElementById("progress").textContent=`${cnt()} / ${TRIALS.length} answered`;}
+c.addEventListener("change",upd);upd();
+document.getElementById("submit").addEventListener("click",()=>{const msg=document.getElementById("msg");
+ const r=document.getElementById("rater").value.trim();if(!r){msg.className="err";msg.textContent="Enter a rater ID.";return;}
+ const miss=TRIALS.filter(t=>!document.querySelector(`input[name="t${t.id}"]:checked`)).map(t=>t.id);
+ if(miss.length){msg.className="err";msg.textContent="Answer trial(s): "+miss.join(", ");return;}
+ let rows=[["rater_id","trial_id","choice"]];
+ TRIALS.forEach(t=>rows.push([r,t.id,document.querySelector(`input[name="t${t.id}"]:checked`).value]));
+ const blob=new Blob([rows.map(x=>x.join(",")).join("\n")],{type:"text/csv"});
+ const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`responses_${r}.csv`;a.click();
+ msg.className="done";msg.innerHTML="Saved! Please email the downloaded CSV to <b>arsol970812@gmail.com</b>. Thank you!";});
+</script></body></html>

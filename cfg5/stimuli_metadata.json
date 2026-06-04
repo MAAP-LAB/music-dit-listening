@@ -1,0 +1,169 @@
+{
+  "trials": [
+    {
+      "trial_id": 1,
+      "type": "more",
+      "target_concept": "drums",
+      "genre": "classical",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "classical_orchestra_with_drums_a+15.wav",
+      "B_source": "classical_orchestra_with_baseline.wav",
+      "notes": "more drums on classical (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 2,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "rock",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "energetic_rock_with_electronic_a+15.wav",
+      "B_source": "energetic_rock_with_baseline.wav",
+      "notes": "more electronic on rock (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 3,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "hiphop",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "hip-hop_beat_with_electronic_a+15.wav",
+      "B_source": "hip-hop_beat_with_baseline.wav",
+      "notes": "more electronic on hiphop (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 4,
+      "type": "more",
+      "target_concept": "drums",
+      "genre": "classical",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "classical_orchestra_with_drums_a+15.wav",
+      "B_source": "classical_orchestra_with_baseline.wav",
+      "notes": "more drums on classical (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 5,
+      "type": "less",
+      "target_concept": "electronic",
+      "genre": "ambient",
+      "cfg": 7,
+      "expected_correct": "B",
+      "A_source": "ambient_soundscape_with_baseline.wav",
+      "B_source": "ambient_soundscape_with_electronic_a-15.wav",
+      "notes": "less electronic on ambient (cfg=7); steered=B"
+    },
+    {
+      "trial_id": 6,
+      "type": "less",
+      "target_concept": "electronic",
+      "genre": "ambient",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "ambient_soundscape_with_electronic_a-15.wav",
+      "B_source": "ambient_soundscape_with_baseline.wav",
+      "notes": "less electronic on ambient (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 7,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "ambient",
+      "cfg": 7,
+      "expected_correct": "B",
+      "A_source": "ambient_soundscape_with_baseline.wav",
+      "B_source": "ambient_soundscape_with_drums_a-15.wav",
+      "notes": "less drums on ambient (cfg=7); steered=B"
+    },
+    {
+      "trial_id": 8,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "ambient",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "ambient_soundscape_with_drums_a-15.wav",
+      "B_source": "ambient_soundscape_with_baseline.wav",
+      "notes": "less drums on ambient (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 9,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "cfg": 5,
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_bass_a+15.wav",
+      "notes": "more bass on jazz (cfg=5); steered=B"
+    },
+    {
+      "trial_id": 10,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "smooth_jazz_piano_bass_a+15.wav",
+      "B_source": "smooth_jazz_piano_baseline.wav",
+      "notes": "more bass on jazz (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 11,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "hiphop",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "hip-hop_beat_with_electronic_a+15.wav",
+      "B_source": "hip-hop_beat_with_baseline.wav",
+      "notes": "more electronic on hiphop (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 12,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "rock",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "energetic_rock_with_electronic_a+15.wav",
+      "B_source": "energetic_rock_with_baseline.wav",
+      "notes": "more electronic on rock (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 13,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "cfg": 5,
+      "expected_correct": null,
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": null,
+      "notes": "audio quality (cfg=5)"
+    },
+    {
+      "trial_id": 14,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "cfg": 7,
+      "expected_correct": null,
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": null,
+      "notes": "audio quality (cfg=7)"
+    },
+    {
+      "trial_id": 15,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "cfg": 5,
+      "expected_correct": null,
+      "A_source": "hip-hop_beat_with_baseline.wav",
+      "B_source": null,
+      "notes": "audio quality (cfg=5)"
+    }
+  ]
+}
