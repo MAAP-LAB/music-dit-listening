@@ -1,0 +1,158 @@
+{
+  "trials": [
+    {
+      "trial_id": 1,
+      "type": "more",
+      "target_concept": "guitar",
+      "genre": "jazz",
+      "cfg": 5,
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_guitar_a+15.wav",
+      "notes": "more guitar on jazz (cfg=5); steered=B"
+    },
+    {
+      "trial_id": 2,
+      "type": "less",
+      "target_concept": "strings",
+      "genre": "classical",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "classical_orchestra_with_strings_a-15.wav",
+      "B_source": "classical_orchestra_with_baseline.wav",
+      "notes": "less strings on classical (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 3,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "jazz",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "smooth_jazz_piano_drums_a-15.wav",
+      "B_source": "smooth_jazz_piano_baseline.wav",
+      "notes": "less drums on jazz (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 4,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "jazz",
+      "cfg": 7,
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_drums_a-15.wav",
+      "notes": "less drums on jazz (cfg=7); steered=B"
+    },
+    {
+      "trial_id": 5,
+      "type": "more",
+      "target_concept": "piano",
+      "genre": "classical",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "classical_orchestra_with_piano_a+15.wav",
+      "B_source": "classical_orchestra_with_baseline.wav",
+      "notes": "more piano on classical (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 6,
+      "type": "more",
+      "target_concept": "piano",
+      "genre": "classical",
+      "cfg": 5,
+      "expected_correct": "B",
+      "A_source": "classical_orchestra_with_baseline.wav",
+      "B_source": "classical_orchestra_with_piano_a+15.wav",
+      "notes": "more piano on classical (cfg=5); steered=B"
+    },
+    {
+      "trial_id": 7,
+      "type": "more",
+      "target_concept": "guitar",
+      "genre": "jazz",
+      "cfg": 7,
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_guitar_a+15.wav",
+      "notes": "more guitar on jazz (cfg=7); steered=B"
+    },
+    {
+      "trial_id": 8,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "cfg": 5,
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_bass_a+15.wav",
+      "notes": "more bass on jazz (cfg=5); steered=B"
+    },
+    {
+      "trial_id": 9,
+      "type": "less",
+      "target_concept": "piano",
+      "genre": "jazz",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "smooth_jazz_piano_piano_a-15.wav",
+      "B_source": "smooth_jazz_piano_baseline.wav",
+      "notes": "less piano on jazz (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 10,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "smooth_jazz_piano_bass_a+15.wav",
+      "B_source": "smooth_jazz_piano_baseline.wav",
+      "notes": "more bass on jazz (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 11,
+      "type": "less",
+      "target_concept": "piano",
+      "genre": "jazz",
+      "cfg": 7,
+      "expected_correct": "A",
+      "A_source": "smooth_jazz_piano_piano_a-15.wav",
+      "B_source": "smooth_jazz_piano_baseline.wav",
+      "notes": "less piano on jazz (cfg=7); steered=A"
+    },
+    {
+      "trial_id": 12,
+      "type": "less",
+      "target_concept": "strings",
+      "genre": "classical",
+      "cfg": 5,
+      "expected_correct": "A",
+      "A_source": "classical_orchestra_with_strings_a-15.wav",
+      "B_source": "classical_orchestra_with_baseline.wav",
+      "notes": "less strings on classical (cfg=5); steered=A"
+    },
+    {
+      "trial_id": 13,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "cfg": 5,
+      "expected_correct": null,
+      "A_source": "classical_orchestra_with_baseline.wav",
+      "B_source": null,
+      "notes": "audio quality (cfg=5)"
+    },
+    {
+      "trial_id": 14,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "cfg": 7,
+      "expected_correct": null,
+      "A_source": "classical_orchestra_with_baseline.wav",
+      "B_source": null,
+      "notes": "audio quality (cfg=7)"
+    }
+  ]
+}
