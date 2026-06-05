@@ -1,0 +1,112 @@
+{
+  "trials": [
+    {
+      "trial_id": 1,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "funk",
+      "hook": "block_out",
+      "expected_correct": "B",
+      "A_source": "funk_groove_with_baseline.wav",
+      "B_source": "funk_groove_with_electronic_a+25_w30-70.wav",
+      "notes": "more electronic on funk (hook=block_out); steered=B"
+    },
+    {
+      "trial_id": 2,
+      "type": "less",
+      "target_concept": "bass",
+      "genre": "hiphop",
+      "hook": "block_out",
+      "expected_correct": "A",
+      "A_source": "hip-hop_beat_with_bass_a-25_w30-70.wav",
+      "B_source": "hip-hop_beat_with_baseline.wav",
+      "notes": "less bass on hiphop (hook=block_out); steered=A"
+    },
+    {
+      "trial_id": 3,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "hiphop",
+      "hook": "pre_cross_attn",
+      "expected_correct": "B",
+      "A_source": "hip-hop_beat_with_baseline.wav",
+      "B_source": "hip-hop_beat_with_drums_a-25_w30-70_pre_cross_attn.wav",
+      "notes": "less drums on hiphop (hook=pre_cross_attn); steered=B"
+    },
+    {
+      "trial_id": 4,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "hook": "pre_cross_attn",
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_bass_a+25_w30-70_pre_cross_attn.wav",
+      "notes": "more bass on jazz (hook=pre_cross_attn); steered=B"
+    },
+    {
+      "trial_id": 5,
+      "type": "less",
+      "target_concept": "bass",
+      "genre": "hiphop",
+      "hook": "pre_cross_attn",
+      "expected_correct": "B",
+      "A_source": "hip-hop_beat_with_baseline.wav",
+      "B_source": "hip-hop_beat_with_bass_a-25_w30-70_pre_cross_attn.wav",
+      "notes": "less bass on hiphop (hook=pre_cross_attn); steered=B"
+    },
+    {
+      "trial_id": 6,
+      "type": "more",
+      "target_concept": "electronic",
+      "genre": "funk",
+      "hook": "pre_cross_attn",
+      "expected_correct": "B",
+      "A_source": "funk_groove_with_baseline.wav",
+      "B_source": "funk_groove_with_electronic_a+25_w30-70_pre_cross_attn.wav",
+      "notes": "more electronic on funk (hook=pre_cross_attn); steered=B"
+    },
+    {
+      "trial_id": 7,
+      "type": "more",
+      "target_concept": "bass",
+      "genre": "jazz",
+      "hook": "block_out",
+      "expected_correct": "B",
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": "smooth_jazz_piano_bass_a+25_w30-70.wav",
+      "notes": "more bass on jazz (hook=block_out); steered=B"
+    },
+    {
+      "trial_id": 8,
+      "type": "less",
+      "target_concept": "drums",
+      "genre": "hiphop",
+      "hook": "block_out",
+      "expected_correct": "A",
+      "A_source": "hip-hop_beat_with_drums_a-25_w30-70.wav",
+      "B_source": "hip-hop_beat_with_baseline.wav",
+      "notes": "less drums on hiphop (hook=block_out); steered=A"
+    },
+    {
+      "trial_id": 9,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "hip-hop_beat_with_baseline.wav",
+      "B_source": null,
+      "notes": "baseline quality"
+    },
+    {
+      "trial_id": 10,
+      "type": "mos",
+      "target_concept": null,
+      "genre": null,
+      "expected_correct": null,
+      "A_source": "smooth_jazz_piano_baseline.wav",
+      "B_source": null,
+      "notes": "baseline quality"
+    }
+  ]
+}
